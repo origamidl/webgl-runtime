@@ -1,0 +1,22 @@
+{
+  "name": "@origami-dsl/webgl-runtime",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/origami-dsl/webgl-runtime.git"
+  },
+  "author": "Christopher Mühl <christopher@padarom.io>",
+  "license": "CC-BY-NC-4.0",
+  "bugs": {
+    "url": "https://github.com/origami-dsl/webgl-runtime/issues"
+  },
+  "homepage": "https://github.com/origami-dsl/webgl-runtime#readme",
+  "dependencies": {
+    "three": "^0.96.0"
+  }
+}

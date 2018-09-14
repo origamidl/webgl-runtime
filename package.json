@@ -1,11 +1,12 @@
 {
-  "name": "@origami-dsl/webgl",
+  "name": "@origamidl/webgl",
   "version": "1.0.0",
   "description": "",
   "main": "dist/index.js",
   "browser": "dist/browser.min.js",
   "scripts": {
-    "build": "babel src --out-dir dist"
+    "build": "babel src --out-dir dist",
+    "prepublish": "npm run build"
   },
   "repository": {
     "type": "git",

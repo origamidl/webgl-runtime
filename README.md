@@ -18,6 +18,14 @@ fold --bottom to --^1
 ```js
 import OrigamiRuntime from '@origami-dsl/webgl';
 
+const code = `
+# paper: square
+
+--bottom: --(.b .c)
+fold .a to .b
+fold --bottom to --^1
+`;
+
 let runtime = new OrigamiRuntime();
 runtime.start();
 ```

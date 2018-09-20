@@ -1,12 +1,12 @@
 {
   "name": "@origamidl/webgl",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "description": "",
   "main": "dist/index.js",
   "browser": "dist/browser.min.js",
   "scripts": {
-    "build": "babel src --out-dir dist",
-    "watch": "babel src --watch --out-dir dist",
+    "build": "rollup -c",
+    "watch": "rollup -c -w",
     "prepublish": "npm run build"
   },
   "repository": {

@@ -24,14 +24,14 @@ let browserMinified = _.cloneDeep(browser);
 browserMinified.output.file = 'dist/browser.min.js';
 browserMinified.plugins.push(uglify());
 
-let esm = {
+let cjs = {
     input: 'src/index.js',
     output: {
         file: 'dist/index.js',
-        format: 'esm',
+        format: 'cjs',
         name: 'Origami'
     },
     external: [ 'three' ]
 };
 
-export default [ browser, browserMinified, esm ];
+export default [ browser, browserMinified, cjs ];

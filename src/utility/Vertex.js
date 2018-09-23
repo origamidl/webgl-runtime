@@ -1,7 +1,7 @@
 // @flow
+import { Vector3 } from 'three'
+
 export type Vertex = {
-    x: number,
-    y: number,
-    z: number,
+    vector: Vector3,
     named: ?string,
 };

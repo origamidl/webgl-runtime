@@ -16,7 +16,7 @@ fold --bottom to --^1
 
 #### As a module
 ```js
-import OrigamiRuntime from '@origami-dsl/webgl';
+import OrigamiRuntime from '@origamidl/webgl';
 
 const code = `
 # paper: square
@@ -27,5 +27,5 @@ fold --bottom to --^1
 `;
 
 let runtime = new OrigamiRuntime();
-runtime.start();
+runtime.parse(code);
 ```

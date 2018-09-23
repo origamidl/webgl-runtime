@@ -31,7 +31,12 @@ let cjs = {
         format: 'cjs',
         name: 'Origami'
     },
-    external: [ 'three' ]
+    external: [ 'three' ],
+    plugins: [
+        babel({
+            exclude: 'node_modules/**'
+        })
+    ]
 };
 
-export default [ browser, browserMinified, cjs ];
+export default [ cjs, browser, browserMinified ];

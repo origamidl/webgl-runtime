@@ -10,13 +10,21 @@ export default function start (element: Element, width: number, height: number) 
     let ambient = new THREE.AmbientLight(0xbbbbbb)
     scene.add(ambient)
 
-    var geometry = new THREE.PlaneGeometry( 40, 40, 1 )
-    var material = new THREE.MeshBasicMaterial( {color: 0xAA1155, side: THREE.DoubleSide} )
-    var plane = new THREE.Mesh( geometry, material )
+    var geometry = new THREE.PlaneGeometry( 70, 70, 1 )
+
+    var frontMaterial = new THREE.MeshBasicMaterial( { color : 0x000000 } )
+
+    var texture = new THREE.ImageUtils.loadTexture('origami_tutor_4.jpg')
+    var backMaterial  = new THREE.MeshBasicMaterial( { color : 0xffffff, map: texture } )
+
+    var plane = new THREE.Object3D()
     scene.add( plane )
 
+    plane.add(new THREE.Mesh( geometry, frontMaterial ));
+    plane.add(new THREE.Mesh( geometry.clone().applyMatrix( new THREE.Matrix4().makeRotationY( Math.PI) ), backMaterial ));
+
     var renderer = new THREE.WebGLRenderer({ alpha: true })
-    renderer.setClearColor(0xffffff, 1)
+    renderer.setClearColor(0xfffff0, 1)
     renderer.setSize( width, height )
     element.appendChild( renderer.domElement )
 

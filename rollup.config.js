@@ -28,13 +28,15 @@ let cjs = {
     input: 'src/index.js',
     output: {
         file: 'dist/index.js',
-        format: 'cjs',
+        format: 'esm',
         name: 'Origami'
     },
     external: [ 'three' ],
     plugins: [
         babel({
-            exclude: 'node_modules/**'
+            babelrc: false,
+            exclude: 'node_modules/**',
+            presets: [['@babel/preset-env', { modules: false }], '@babel/preset-flow'],
         })
     ]
 };

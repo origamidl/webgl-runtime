@@ -5,7 +5,7 @@
   "main": "dist/index.js",
   "scripts": {
     "build": "rollup -c",
-    "watch": "rollup -c -w"
+    "watch": "rollup -c -w",
     "prepublish": "npm run build"
   },
   "repository": {
@@ -25,8 +25,6 @@
     "@babel/cli": "^7.4.4",
     "@babel/core": "^7.4.5",
     "@babel/preset-env": "^7.4.5",
-    "@babel/preset-flow": "^7.0.0",
-    "babel-plugin-transform-class-properties": "^6.24.1",
     "lodash": "^4.17.11",
     "rollup": "^0.65.2",
     "rollup-plugin-babel": "^4.3.2",

@@ -5,8 +5,7 @@
   "main": "dist/index.js",
   "scripts": {
     "build": "rollup -c",
-    "watch": "rollup -c -w",
-    "flow": "flow src",
+    "watch": "rollup -c -w"
     "prepublish": "npm run build"
   },
   "repository": {
@@ -20,19 +19,21 @@
   },
   "homepage": "https://github.com/origami-dsl/webgl-runtime#readme",
   "dependencies": {
-    "three": "^0.96.0"
+    "three": "^0.104.0"
   },
   "devDependencies": {
-    "@babel/cli": "^7.1.0",
-    "@babel/core": "^7.1.0",
-    "@babel/preset-env": "^7.1.0",
+    "@babel/cli": "^7.4.4",
+    "@babel/core": "^7.4.5",
+    "@babel/preset-env": "^7.4.5",
     "@babel/preset-flow": "^7.0.0",
     "babel-plugin-transform-class-properties": "^6.24.1",
-    "flow-bin": "^0.81.0",
     "lodash": "^4.17.11",
     "rollup": "^0.65.2",
-    "rollup-plugin-babel": "^4.0.3",
+    "rollup-plugin-babel": "^4.3.2",
     "rollup-plugin-node-resolve": "^3.4.0",
-    "rollup-plugin-uglify": "^5.0.2"
+    "rollup-plugin-typescript": "^1.0.1",
+    "rollup-plugin-uglify": "^5.0.2",
+    "tslib": "^1.9.3",
+    "typescript": "^3.4.5"
   }
 }

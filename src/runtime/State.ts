@@ -1,5 +1,4 @@
-// @flow
-import { type Vertex } from '../utility/Vertex'
+import { Vertex } from '../utility/Vertex'
 import { Geometry, Face3, Vector3 } from 'three'
 
 export default class State {

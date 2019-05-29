@@ -1,6 +1,6 @@
-// @flow
 import * as THREE from 'three'
-export default function start (element: Element, width: number, height: number) {
+
+export default async function start (element: Element, width: number, height: number) {
     let scene = new THREE.Scene()
 
     let camera = new THREE.PerspectiveCamera( 75, width / height, 0.1, 1000 )
@@ -13,7 +13,8 @@ export default function start (element: Element, width: number, height: number) 
 
     var frontMaterial = new THREE.MeshBasicMaterial( { color : 0x000000 } )
 
-    var texture = new THREE.ImageUtils.loadTexture('origami_tutor_4.jpg')
+    let loader = new THREE.TextureLoader()
+    let texture = loader.load('origami_tutor_4.jpg')
     var backMaterial  = new THREE.MeshBasicMaterial( { color : 0xffffff, map: texture } )
 
     var plane = new THREE.Object3D()

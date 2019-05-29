@@ -1,10 +1,11 @@
 import resolve from 'rollup-plugin-node-resolve';
+import typescript from 'rollup-plugin-typescript';
 import { uglify } from 'rollup-plugin-uglify';
 import babel from 'rollup-plugin-babel';
 import _ from 'lodash';
 
 let browser = {
-    input: 'src/browser.js',
+    input: 'src/browser.ts',
     output: {
         file: 'dist/browser.js',
         format: 'iife',
@@ -16,7 +17,8 @@ let browser = {
         }),
         babel({
             exclude: 'node_modules/**'
-        })
+        }),
+        typescript()
     ]
 };
 
@@ -25,7 +27,7 @@ browserMinified.output.file = 'dist/browser.min.js';
 browserMinified.plugins.push(uglify());
 
 let cjs = {
-    input: 'src/index.js',
+    input: 'src/index.ts',
     output: {
         file: 'dist/index.js',
         format: 'esm',
@@ -36,8 +38,9 @@ let cjs = {
         babel({
             babelrc: false,
             exclude: 'node_modules/**',
-            presets: [['@babel/preset-env', { modules: false }], '@babel/preset-flow'],
-        })
+            presets: [['@babel/preset-env', { modules: false }]],
+        }),
+        typescript()
     ]
 };
 

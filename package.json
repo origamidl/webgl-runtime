@@ -19,7 +19,7 @@
   },
   "homepage": "https://github.com/origami-dsl/webgl-runtime#readme",
   "dependencies": {
-    "three": "^0.104.0"
+    "three": "^0.125.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.4.4",
